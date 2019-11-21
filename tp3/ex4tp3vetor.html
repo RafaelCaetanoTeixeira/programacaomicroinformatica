@@ -1,0 +1,37 @@
+  
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 4 - TP 3</title>
+    
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+        <div class="container">
+                <p>
+                    <a class="button" href="../tp3/tp3vetor.html">Voltar</a>
+                </p>
+        </div>
+    <script type="text/javascript">
+        var vet = [20];
+        var aux;
+        for(var x = 0; x < 20; x++){
+            vet[x] = parseInt(prompt("Digite um numero:"));
+        }
+        for(var x = 20; x >= 0; x--){
+            for(var y = 0; y < 20; y++){
+                if(vet[y] >= vet[y+1]){
+                    aux = vet[y];
+                    vet[y] = vet[y+1];
+                    vet[y+1] = aux;
+                }
+            }
+        }
+        document.write("Lista em ordem crescente: " + "<br>");
+        for(var x = 0; x < 20; x++){
+            document.write(vet[x] + "<br>");
+        }
+    </script>
+</body>
+</html>

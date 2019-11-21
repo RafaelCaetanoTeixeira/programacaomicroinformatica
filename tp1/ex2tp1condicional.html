@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    </head>
+    <body>
+    <div class="container">
+    <h1>Calculador de Médias</h1>
+    <p>
+        Digite a nota do Trabalho Prático: <br>
+        <input type="text" id="tp">
+    </p>
+    <p>
+        Digite a nota da Avaliação Semestral: <br>
+        <input type="text" id="as">
+    </p>
+    <p>
+        Digite a nota do Exame Final: <br>
+        <input type="text" id="ef">
+    </p>
+    <p>
+        <input type="button" class="button" value="Calcular" onclick="calcularNota()">
+    </p>
+    <br>
+	<p>
+		<a class="button" href="../tp1/tp1condicional.html">Voltar</a>
+	</p>
+    </div>
+    
+    <script>
+        function calcularNota() {
+            var tp = Number(document.all['tp'].value);
+            var as = Number(document.all['as'].value);
+            var ef = Number(document.all['ef'].value);
+            var media = (tp * 2  + as * 3 + ef * 5)/10;
+            if (media >= 8.0 & media <= 10.0) { 
+                document.write("A média é: " + media.toFixed(2) + " , portanto situação A.<br><p><a href='../tp1/ex2tp1condicional.html'>Voltar</a></p>");
+            } else if (media >= 7.0 & media <= 7.9) {
+                document.write("A média é: " + media.toFixed(2) + " , portanto situação B.<br><p><a href='../tp1/ex2tp1condicional.html'>Voltar</a></p>");
+            } else if (media >= 6.0 & media <= 6.9) {
+                document.write("A média é: " + media.toFixed(2) + " , portanto situação C.<br><p><a href='../tp1/ex2tp1condicional.html'>Voltar</a></p>");
+            } else if (media >= 5.0 & media <= 5.9) {
+                document.write("A média é: " + media.toFixed(2) + " , portanto situação D.<br><p><a href='../tp1/ex2tp1condicional.html'>Voltar</a></p>");
+            } else  {
+                document.write("A média é: " + media.toFixed(2) + " , portanto situação E.<br><p><a href='../tp1/ex2tp1condicional.html'>Voltar</a></p>")
+            } 
+        } 
+    </script>
+    </body>
+</html>

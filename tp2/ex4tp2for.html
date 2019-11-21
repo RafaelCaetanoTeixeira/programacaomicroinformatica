@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vinho</title>
+	
+	<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+<div class="container">
+
+<p><b>1-Tinto:</b></p>
+	<input type="text" name="tinto" id="vt">
+<p><b>2-Branco:</b></p>
+	<input type="text" name="branco" id="vb">
+<p><b>3-Rosê:</b></p>
+	<input type="text" name="rose" id="vr">
+	<p>
+<input  class="button" type = "button" value = "Verificar" onclick = "vinhos()"/></p>
+<p><strong id="total"></strong></p>
+<p><a class="button" href="tp2for.html">Voltar</a></p>
+</div>
+<script type="text/javascript">
+	 function vinhos() {
+        var vt = Number(document.all['vt'].value);
+        var vb = Number(document.all['vb'].value);
+        var vr = Number(document.all['vr'].value);
+        var soma = vt + vb + vr;
+        	if (soma < 50) {
+            	alert("Está faltando números.")
+        	} else {
+            	document.write("A porcentagem do Vinho Tinto é: " + vt/0.5 + "%<br>"
+            	+ " ,a porcentagem de Vinho Branco é: " + vb/0.5 + "%<br>" 
+             	+ " e a porcentagem de Vinho Rosê é: " + vr/0.5 + "%<br><p><a href='../tp2/ex4tp2for.html'>Voltar</a></p>");
+        	}
+    	}
+</script>
+
+</body>
+</html>

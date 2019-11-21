@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="calculo.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    
+<div class="container">
+<h1>Menu de Opções</h1>
+<p>
+    Selecione a opçao: <br>
+    <select name="opção" id="opcao" onchange="selecionarOpcao()">
+        <option value="0">...</option>
+        <option value="1">Somar</option>
+        <option value="2">Raiz Quadrada</option>
+    </select>
+</p>
+<br>
+	<p>
+		<a class="button" href="../tp1/tp1condicional.html">Voltar</a>
+	</p>
+</div>
+<script>
+    function selecionarOpcao() {
+        var opcao = document.all['opcao'].value;
+        switch (opcao) {
+            case '1':
+                var a = +prompt("Digite um número: ");
+                var b = +prompt("Digite um outro número: ");
+                var c = a + b;
+                alert("A soma dos dois números é: " + c + ".")
+                break;
+                case '2': 
+                var d = prompt("Digite um número: ");
+                var e = Math.sqrt(d).toFixed(2);
+                alert("A raiz desse número é: " + e + ".")
+                break;
+        }
+    }
+</script>
+</body>
+</html>

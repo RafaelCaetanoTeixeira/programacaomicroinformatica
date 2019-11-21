@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 2 - TP 3</title>
+    
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+        <div class="container">
+                <p>
+                    <a class="button" href="../tp3/tp3vetor.html">Voltar</a>
+                </p>
+        </div>
+    <script type="text/javascript">
+        var vet = [8];
+        var c = 0;
+        for(var x = 0; x < 8; x++){
+            vet[x] = parseInt(prompt("Digite um numero:"));
+        }
+        for(var x = 0; x < 8; x++){
+            if(vet[x] > 50){
+                document.write("Numero acima de 50: " + vet[x] + "<br>");
+                document.write("Posição: " + (x+1) + "<br>");
+            }
+            else {
+                c++;
+            }
+        }
+        if (c == 8){
+            document.write("Não existem numeros maiores que 50");
+        }
+    </script>
+</body>
+</html>

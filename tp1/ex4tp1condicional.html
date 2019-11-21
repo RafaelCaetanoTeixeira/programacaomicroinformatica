@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="calculo.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    
+<div class="container">
+<h1>Qual é  o maior?</h1>  
+<p>
+    Digite um dia: <br>
+    <input type="text" id="dia">
+</p>
+<p>
+    Digite um mês: <br>
+    <input type="text" id="mes">
+</p>
+<p>
+    Digite um ano: <br>
+    <input type="text" id="ano">
+</p>
+<p>
+    Digite um outro dia: <br>
+    <input type="text" id="dia1">
+</p>
+<p>
+    Digite um outro mês: <br>
+    <input type="text" id="mes1">
+</p>
+<p>
+    Digite um outro ano: <br>
+    <input type="text" id="ano1">
+</p>
+<p>
+    <input type="button" class="button" value="Calcular" onclick="calcularIdade()"> 
+</p>
+<br>
+	<p>
+		<a class="button" href="../tp1/tp1condicional.html">Voltar</a>
+	</p>
+</div>
+<script>
+    function calcularIdade() {
+        var dia = Number(document.all['dia'].value);
+        var mes = Number(document.all['mes'].value);
+        var ano = Number(document.all['ano'].value);
+        var dia1 = Number(document.all['dia1'].value);
+        var mes1 = Number(document.all['mes1'].value);
+        var ano1 = Number(document.all['ano1'].value);
+        if (ano > ano1) {
+            document.write("A data maior cronologicamente é: " + dia1 + "/" + mes1 + "/" + ano1 + ".<br><p><a href='../tp1/ex4tp1condicional.html'>Voltar</a></p>");
+        } else if (ano1 > ano) {
+            document.write("A data maior cronologicamente é: " + dia + "/" + mes + "/" + ano + ".<br><p><a href='../tp1/ex4tp1condicional.html'>Voltar</a></p>");
+        } else if (ano == ano1) {
+            if (mes > mes1) {
+               document.write("A data maior cronologicamente é: " + dia1 + "/" + mes1 + "/" + ano1 + ".<br><p><a href='../tp1/ex4tp1condicional.html'>Voltar</a></p>");
+            } else if (mes1 > mes) {
+                document.write("A data maior cronologicamente é: " + dia + "/" + mes + "/" + ano + ".<br><p><a href='../tp1/ex4tp1condicional.html'>Voltar</a></p>");
+            } else if (mes == mes1) {
+                if (dia > dia1) {
+                    document.write("A data maior cronologicamente é: " + dia1 + "/" + mes1 + "/" + ano1 + ".<br><p><a href='../tp1/ex4tp1condicional.html'>Voltar</a></p>"); 
+                } else if (dia1 > dia) {
+                    document.write("A data maior cronologicamente é: " + dia + "/" + mes + "/" + ano + ".<br><p><a href='../tp1/ex4tp1condicional.html'>Voltar</a></p>");
+                } else if (dia = dia1) {
+                    document.write("As datas são iguais.");
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>

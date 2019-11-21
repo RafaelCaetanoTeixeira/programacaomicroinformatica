@@ -1,0 +1,32 @@
+  
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 3 - TP 3</title>
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+        <div class="container">
+                <p>
+                    <a class="button" href="../tp3/tp3vetor.html">Voltar</a>
+                </p>
+        </div>
+    <script type="text/javascript">
+        var vet = [10];
+        
+        for(var x = 0; x < 10; x++){
+            vet[x] = parseInt(prompt("Digite um numero:"));
+                if(vet[x] % 2 == 0){
+                    vet[x] = vet[x] + 5;
+                }
+                else{
+                    vet[x] = vet[x] * 5;
+                }
+        }
+        for(var x = 0; x < 10; x++){
+            document.write("Vetor alterado: " + vet[x] + "<br>");
+        }
+    </script>
+</body>
+</html>
